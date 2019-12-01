@@ -1,6 +1,7 @@
-const NewsAPI = require('newsapi');
-const newsapi = new NewsAPI('b042b722326643868b8ba64fe43377bd');
-
+const NewsAPI = require("newsapi");
+const key = require("./config.js");
+const apikey = key.ApiKey;
+const newsapi = new NewsAPI(apikey);
 
 const getAmazonArticles = () => 
     newsapi.v2.everything({
