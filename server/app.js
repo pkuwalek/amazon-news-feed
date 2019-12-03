@@ -1,9 +1,12 @@
 const express = require("express");
 const app = express();
 const newsApi = require("./newsApi");
+const cors = require('cors');
+app.use(cors());
 
 app.get('/', function (req, res) {
-    return res.json(newsApi.getAmazonArticles());
+    const getArticles = newsApi.getAmazonArticles();
+    return getArticles.then((response) => res.json(response.articles));
 });
 
 const runServer = (port) =>{
