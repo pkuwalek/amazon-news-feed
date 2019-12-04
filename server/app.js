@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:query', function (req, res) {
-    const getArticles = newsApi.getAmazonArticles(req.query.q);
+    const getArticles = newsApi.getAmazonArticles(req.params.query);
     return getArticles.then((response) => res.json(response.articles));
 });
 
