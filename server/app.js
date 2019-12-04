@@ -9,6 +9,11 @@ app.get('/', function (req, res) {
     return getArticles.then((response) => res.json(response.articles));
 });
 
+app.get('/:query', function (req, res) {
+    const getArticles = newsApi.getAmazonArticles(req.query.q);
+    return getArticles.then((response) => res.json(response.articles));
+});
+
 const runServer = (port) =>{
     console.log(`Server is running on port ${port}`);
     app.listen(port);
