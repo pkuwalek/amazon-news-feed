@@ -1,3 +1,17 @@
 body {
-    background-color: palevioletred;
+    background-color:#b9caf8;
+    justify-content: center;
+}
+#articles{
+    width: 70%;
+    margin: auto;
+}
+.article-card{
+    display: grid;
+    justify-content: center;
+    margin-bottom: 6em;
+}
+.image{
+    width: 100%;
+    height: auto;
 }
