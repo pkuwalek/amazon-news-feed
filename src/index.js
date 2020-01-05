@@ -8,13 +8,35 @@ const Api = {
 };
 
 function showArticles() {
-    const articleCard = ({urlToImage, title, description, content}) => `
+    const removeReadMoreFromDescription = (description) => {
+        const regex = /(.*)(Read more\.\.\.)/;
+        //const regexForContent = /\[\+\d+\schars\]/gm;
+        let result = description.match(regex);
+        if (result){
+            return result[1];
+        }
+        return description;
+    };
+    const removeCharsFromContent = (content) => {
+        console.log(content)
+        const regex = /(.*)(\[\+\d+ chars\])$/s;
+        let result = content.match(regex);
+        console.log(result)
+        if(result){
+            return result[1];
+        }
+        return content;
+    };
+
+    const articleCard = ({urlToImage, title, description, content, url}) => `
     <div class="article-card">
         <img src="${urlToImage}" class="image">
         <h1 class="title">${title}</h1>
-        <h3 class="description">${description}</h3>
-        <p class="content">${content}</p>
-        <button type="button" class="read-more-btn">Read more</button>
+        <h3 class="description">${removeReadMoreFromDescription(description)}</h3>
+        <p class="content">${removeCharsFromContent(content)}</p>
+        <button type="button" class="read-more-btn" onclick="window.open('${url}')">
+            Read more
+        </button>
     </div>
     `;
 
