@@ -1,10 +1,18 @@
 body {
     background-color:#b9caf8;
     justify-content: center;
+    font-family: 'Source Sans Pro', sans-serif;
 }
-#articles{
+.page-content{
     width: 70%;
     margin: auto;
+    display: flex;
+    #articles{
+        flex-grow: 2;
+    }
+    #top-articles{
+        flex-grow: 1;
+    }
 }
 .article-card{
     display: grid;
@@ -19,4 +27,9 @@ body {
 .title{
     background-color: black;
     color: white;
+}
+.navbar {
+    .logo {
+        height: 45px;
+    }
 }

@@ -1,2 +1,2 @@
-body{background-color:#b9caf8;justify-content:center}#articles{width:70%;margin:auto}.article-card{display:grid;justify-content:center;margin-bottom:6em;background-color:white}.image{width:100%;height:auto}.title{background-color:black;color:white}
+body{background-color:#b9caf8;justify-content:center;font-family:'Source Sans Pro', sans-serif}.page-content{width:70%;margin:auto;display:flex}.page-content #articles{flex-grow:2}.page-content #top-articles{flex-grow:1}.article-card{display:grid;justify-content:center;margin-bottom:6em;background-color:white}.image{width:100%;height:auto}.title{background-color:black;color:white}.navbar .logo{height:45px}
 
