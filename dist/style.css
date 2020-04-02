@@ -1,2 +1,21 @@
-body{background-color:#b9caf8;justify-content:center;font-family:'Source Sans Pro', sans-serif}.page-content{width:70%;margin:auto;display:flex}.page-content #articles{flex-grow:2}.page-content #top-articles{flex-grow:1}.article-card{display:grid;justify-content:center;margin-bottom:6em;background-color:white}.image{width:100%;height:auto}.title{background-color:black;color:white}.navbar .logo{height:45px}
+body {
+  background-color: #D7ECFC;
+  justify-content: center;
+  font-family: 'Source Sans Pro', sans-serif; }
+  body .navbar .logo {
+    height: 45px; }
+    body .navbar .logo:hover {
+      cursor: pointer; }
+  body .navbar .nav-item:hover {
+    cursor: pointer; }
+  body .page-content {
+    width: 70%;
+    margin: 61px auto auto auto;
+    display: flex; }
+    body .page-content #articles {
+      flex-grow: 2; }
+      body .page-content #articles .card {
+        border: 2px solid #FF9900; }
+    body .page-content #top-articles {
+      flex-grow: 1; }
 
