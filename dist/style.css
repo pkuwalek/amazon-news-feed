@@ -13,8 +13,8 @@ body {
     margin: 61px auto auto auto; }
     body .page-content #articles .card {
       border: 2px solid #FF9900; }
-    body .page-content #articles #top-articles {
-      max-width: 100%; }
+    body .page-content .toptencontainer {
+      border: 2px solid #FF9900; }
     body .page-content .card-header {
       background-color: #FF9900; }
     body .page-content .list-group-item:hover {

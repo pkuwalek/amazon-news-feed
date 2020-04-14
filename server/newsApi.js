@@ -8,6 +8,13 @@ const getAmazonArticles = (query) =>
         qInTitle: `Amazon + ' AND ' + ${query || ""}`,
         language: 'en',
         sortBy: 'relevancy',
-});
+    });
 
-module.exports = {getAmazonArticles};
+const getTopTen = () =>
+    newsapi.v2.topHeadlines({
+        q: 'Amazon',
+        language: 'en',
+        pageSize: 10,
+    });
+
+module.exports = { getAmazonArticles, getTopTen };

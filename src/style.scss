@@ -1,35 +1,38 @@
 body {
-    background-color:#b9caf8;
+    background-color:#D7ECFC;
     justify-content: center;
     font-family: 'Source Sans Pro', sans-serif;
-}
-.page-content{
-    width: 70%;
-    margin: auto;
-    display: flex;
-    #articles{
-        flex-grow: 2;
+    .navbar {
+        .logo {
+            height: 45px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        .nav-item {
+            &:hover{
+                cursor: pointer;
+            }
+        }
     }
-    #top-articles{
-        flex-grow: 1;
-    }
-}
-.article-card{
-    display: grid;
-    justify-content: center;
-    margin-bottom: 6em;
-    background-color: white;
-}
-.image{
-    width: 100%;
-    height: auto;
-}
-.title{
-    background-color: black;
-    color: white;
-}
-.navbar {
-    .logo {
-        height: 45px;
+    .page-content{
+        width: 70%;
+        margin: 61px auto auto auto;
+        #articles{
+            .card{
+                border: 2px solid #FF9900;
+            }
+        }
+        .toptencontainer{
+            border: 2px solid #FF9900;
+        }
+        .card-header{
+            background-color: #FF9900;
+        }
+        .list-group-item{
+            &:hover{
+                cursor: pointer;
+            }
+        }
     }
 }

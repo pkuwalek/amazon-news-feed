@@ -9,6 +9,11 @@ app.get('/', function (req, res) {
     return getArticles.then((response) => res.json(response.articles));
 });
 
+app.get('/top10', function (req, res) {
+    const getTop10 = newsApi.getTopTen();
+    return getTop10.then((response) => res.json(response.articles));
+})
+
 app.get('/:query', function (req, res) {
     const getArticles = newsApi.getAmazonArticles(req.params.query);
     return getArticles.then((response) => res.json(response.articles));
